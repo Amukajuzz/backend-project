@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="myicon.ico"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="vh-100 bg-image"
+         style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px">
+                        <div class="card-body p-5">
+                            <h2 class="text-uppercase text-center mb-5">Welcome to the Home Page!</h2>
+                            <div id="user-info" class="text-center mb-4">
+                                <% if (email) { %>
+                                    Logged in as <%= email %>
+                                    <a href="/logout" class="btn btn-danger btn-lg mt-3">Sign Out</a>
+                                <% } else { %>
+                                    You are not logged in.
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a href="/register" class="btn btn-primary btn-lg mx-2">Register</a>
+                                        <a href="/login" class="btn btn-secondary btn-lg mx-2">Login</a>
+                                    </div>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
